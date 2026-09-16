@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gopal Kumar | Full-Stack Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Gopal Kumar — Full-Stack Developer building modern web applications, AI-powered products, and real-world digital solutions." />
+  <meta name="keywords" content="Gopal Kumar, Full-Stack Developer, MERN Stack, AI Integration, React, Node.js, Python, Lovely Professional University, Software Engineer" />
+  <meta name="author" content="Gopal Kumar" />
+  
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gopal Kumar | Full-Stack Developer" />
+  <meta property="og:description" content="Building full-stack products, AI-powered applications, and real-world digital solutions. Open to Software Development Internships." />
+  <meta property="og:url" content="https://gopalnayak980.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gopal Kumar | Full-Stack Developer" />
+  <meta name="twitter:description" content="Building full-stack products, AI-powered applications, and real-world digital solutions." />
+  
+  <!-- Favicon (SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='25' fill='%23060709'/%3E%3Crect x='5' y='5' width='90' height='90' rx='20' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50%25' y='60%25' font-family='sans-serif' font-weight='900' font-size='42' fill='%23FFFFFF' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glow Elements -->
+  <div class="bg-canvas-container">
+    <canvas id="hero-canvas"></canvas>
+  </div>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="noise-overlay"></div>
+  <div class="cursor-spotlight"></div>
+
+  <!-- App Wrapper -->
+  <div class="app-wrapper">
+
+    <!-- 1. FLOATING NAVIGATION BAR -->
+    <header class="header-nav">
+      <div class="nav-shell">
+        <a href="#hero" class="nav-logo" aria-label="Gopal Kumar Homepage">
+          <div class="logo-badge">GK</div>
+          <span>Gopal Kumar</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#certificates" class="nav-link">Certifications</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#journey" class="nav-link">Journey</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="status-pill" title="Currently open to software development internship opportunities">
+            <span class="status-dot"></span>
+            <span>Open to Internships</span>
+          </div>
+          <a href="#contact" class="btn-nav-cta">Let's Connect</a>
+          <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" aria-label="Mobile Navigation">
+      <a href="#hero" class="mobile-nav-link active">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#certificates" class="mobile-nav-link">Certifications</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#journey" class="mobile-nav-link">Journey</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <div class="status-pill" style="margin-top: 20px;">
+        <span class="status-dot"></span>
+        <span>Open to Internships</span>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- 2. HERO SECTION ("THE WOW MOMENT") -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            
+            <div class="hero-avatar-badge">
+              <img src="assets/profile.jpg" alt="Gopal Kumar" class="hero-avatar-thumb" />
+              <span class="hero-avatar-text">Gopal Kumar &bull; Open to Internships</span>
+            </div>
+
+            <h1 class="hero-title">Gopal Kumar</h1>
+            
+            <div class="hero-subtitle">
+              <span>Full-Stack Developer</span>
+              <span style="color: var(--text-muted);">/</span>
+              <span style="color: var(--accent-cyan);">MERN + AI Integrations</span>
+            </div>
+
+            <p class="hero-lede">
+              Building full-stack products, AI-powered applications, and real-world digital solutions. Focused on clean architecture, scalable backends, and intuitive user experiences.
+            </p>
+
+            <div class="hero-chips">
+              <span class="tech-chip">MERN STACK</span>
+              <span class="tech-chip">AI INTEGRATION</span>
+              <span class="tech-chip">REST APIs</span>
+              <span class="tech-chip">DATABASES</span>
+              <span class="tech-chip">DEPLOYMENT</span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn-primary">
+                <span>View Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <span>View GitHub Profile</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+
+            <div class="hero-social-links">
+              <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/gopalnayak2005" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://leetcode.com/Gopal_Nayak" target="_blank" rel="noopener noreferrer" class="social-pill" title="LeetCode">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.535 5.894 5.894 0 0 0 2.434-.245 5.764 5.764 0 0 0 2.015-1.077l3.854-4.126 5.406-5.788a1.374 1.374 0 0 0-.961-2.327h-6.417zm-1.895 2.748h4.63l-4.707 5.04-4.707 5.04c-.394.422-.924.71-1.503.818-.58.107-1.178.016-1.7-.258a2.96 2.96 0 0 1-1.32-1.398 2.87 2.87 0 0 1-.167-1.182c.03-.4.17-.783.407-1.108l3.854-4.126 5.213-5.584zM2.876 16.273a7.48 7.48 0 0 1-.444-1.296A7.08 7.08 0 0 1 2.35 12c0-.682.096-1.36.284-2.014.188-.654.48-1.272.868-1.83l.872.808a5.618 5.618 0 0 0-.703 1.482 5.568 5.568 0 0 0-.226 1.554c0 .546.077 1.09.226 1.614.15.524.385 1.018.696 1.464l-.872.808z"/></svg>
+                <span>LeetCode</span>
+              </a>
+              <a href="mailto:gopal32452@gmail.com" class="social-pill" title="Email Gopal">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Email</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ABOUT SECTION (SPLIT SCREEN EDITORIAL) -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">01</span> About</div>
+            <h2 class="section-title">Product Mindset &amp; Engineering Focus</h2>
+            <p class="section-subtitle">Bridging robust backend engineering, full-stack MERN development, and modern AI capabilities to solve real problems.</p>
+          </div>
+
+          <div class="about-grid">
+            
+            <!-- Profile Photo & Quote Column -->
+            <div class="about-photo-card">
+              <div class="about-photo-frame">
+                <img src="assets/profile.jpg" alt="Gopal Kumar - Software Developer" class="about-profile-img" />
+                <div class="about-photo-overlay">
+                  <div>
+                    <div class="about-photo-caption">Gopal Kumar</div>
+                    <div class="about-photo-role">Full-Stack Engineer &bull; CSE @ LPU</div>
+                  </div>
+                  <div class="status-pill" style="margin: 0;">
+                    <span class="status-dot"></span>
+                    <span>2024–2028</span>
+                  </div>
+                </div>
+              </div>
+              <div class="about-statement-card" style="margin-top: 20px; width: 100%;">
+                <div class="about-quote">
+                  "I build <span>products</span>, not just projects."
+                </div>
+                <p class="about-quote-sub">
+                  Software is most powerful when it goes beyond local tutorials into live, production environments that deliver real value to users and businesses.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bio & Stats Column -->
+            <div class="about-details">
+              <p class="about-bio">
+                I am a second-year <strong>Computer Science &amp; Engineering student at Lovely Professional University</strong>. My core engineering focus lies in <strong>Full-Stack Development (MERN Stack)</strong>, <strong>AI API Integration (Google Gemini, Groq)</strong>, and <strong>Data Structures &amp; Problem Solving</strong>.
+              </p>
+              <p class="about-bio">
+                From engineering an AI-driven resume scoring platform to building a bilingual voice assistant with computer vision, and digitizing my family's 25-year-old business in Barhi, Jharkhand — I build complete, deployed software end-to-end.
+              </p>
+
+              <div class="about-stats-grid">
+                <div class="stat-card">
+                  <div class="stat-label">Education</div>
+                  <div class="stat-value">B.Tech CSE — LPU</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px;">2024 – 2028</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Academic CGPA</div>
+                  <div class="stat-value highlight">7.8 / 10.0</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px;">Verified Record</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Location</div>
+                  <div class="stat-value">Hazaribagh, Jharkhand</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px;">India (Open to Relocate)</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Availability</div>
+                  <div class="stat-value" style="color: var(--accent-emerald);">Open to Internships</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px;">Immediate Start</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS SECTION (INTERACTIVE TECH MATRIX) -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">02</span> Tech Stack</div>
+            <h2 class="section-title">Languages, Frameworks &amp; Tools</h2>
+            <p class="section-subtitle">A curated, modern tech stack applied across production systems, RESTful microservices, and AI workflows.</p>
+          </div>
+
+          <div class="skills-tabs-container">
+            <button class="skill-tab-btn active" data-filter="all">All Technologies</button>
+            <button class="skill-tab-btn" data-filter="languages">Languages</button>
+            <button class="skill-tab-btn" data-filter="frontend">Frontend</button>
+            <button class="skill-tab-btn" data-filter="backend">Backend</button>
+            <button class="skill-tab-btn" data-filter="database">Database &amp; Cloud</button>
+            <button class="skill-tab-btn" data-filter="ai">AI &amp; APIs</button>
+            <button class="skill-tab-btn" data-filter="tools">DevOps &amp; Tools</button>
+          </div>
+
+          <div class="skills-categories-grid">
+
+            <!-- Category 1: Languages -->
+            <div class="skill-category-card" data-category="languages">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h3 class="category-title">Languages</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>JavaScript (ES6+)</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Python 3</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Java</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>C++</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>C</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>SQL</span></div>
+              </div>
+            </div>
+
+            <!-- Category 2: Frontend -->
+            <div class="skill-category-card" data-category="frontend">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3 class="category-title">Frontend</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>React.js</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Vite</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Tailwind CSS</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>HTML5</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>CSS3 / Vanilla</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Bootstrap 5</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>EJS</span></div>
+              </div>
+            </div>
+
+            <!-- Category 3: Backend -->
+            <div class="skill-category-card" data-category="backend">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <h3 class="category-title">Backend &amp; APIs</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Node.js</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Express.js</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>RESTful APIs</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Flask (Python)</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>JWT Authentication</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Passport.js</span></div>
+              </div>
+            </div>
+
+            <!-- Category 4: Database & Cloud -->
+            <div class="skill-category-card" data-category="database">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <h3 class="category-title">Database &amp; Cloud</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>MongoDB</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>MongoDB Atlas</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Mongoose ODM</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>PostgreSQL</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>MySQL</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>SQLite</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Cloudinary Media</span></div>
+              </div>
+            </div>
+
+            <!-- Category 5: AI & Integrations -->
+            <div class="skill-category-card" data-category="ai">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                </div>
+                <h3 class="category-title">AI &amp; Integrations</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Google Gemini AI</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Groq Fast AI</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Adzuna Jobs API</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>PDF.js Resume Parser</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Web Speech API</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>WebRTC Camera</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Google Maps API</span></div>
+              </div>
+            </div>
+
+            <!-- Category 6: Tools & Platforms -->
+            <div class="skill-category-card" data-category="tools">
+              <div class="category-header">
+                <div class="category-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <h3 class="category-title">DevOps &amp; Tools</h3>
+              </div>
+              <div class="skill-badges-wrapper">
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Git</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>GitHub</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Postman</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>VS Code</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Vercel</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>Render</span></div>
+                <div class="skill-badge"><span class="skill-badge-dot"></span><span>GitHub Pages</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CERTIFICATIONS SECTION -->
+      <section id="certificates" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">03</span> Credentials</div>
+            <h2 class="section-title">Certifications</h2>
+            <p class="certs-intro-text">
+              Continuous learning through hands-on courses and technical certifications across full-stack development, AI, system design, programming, databases, and developer tools.
+            </p>
+          </div>
+
+          <div class="certs-filter-tabs">
+            <button class="cert-filter-btn active" data-filter="all">All</button>
+            <button class="cert-filter-btn" data-filter="fullstack">Full-Stack</button>
+            <button class="cert-filter-btn" data-filter="ai">AI</button>
+            <button class="cert-filter-btn" data-filter="programming">Programming</button>
+            <button class="cert-filter-btn" data-filter="database">Database</button>
+            <button class="cert-filter-btn" data-filter="tools">Tools</button>
+            <button class="cert-filter-btn" data-filter="other">Other</button>
+          </div>
+
+          <div class="certificates-grid-premium">
+
+            <!-- 1. CipherSchools — Full-Stack Development -->
+            <div class="cert-card-premium" data-category="fullstack">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l9-9l-5-2l-2 6z"></path><path d="M9 15l-4-4l1.5-1.5"></path></svg>
+                  </div>
+                  <span class="cert-date-chip">Aug 2026</span>
+                </div>
+                <div class="cert-org-name">CipherSchools</div>
+                <h3 class="cert-title">Full-Stack Development</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1UqOJ9Va3QvwUWjE7xjf3KT63YZquUDAu/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 2. CipherSchools — Low Level System Design -->
+            <div class="cert-card-premium" data-category="fullstack">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>
+                  </div>
+                  <span class="cert-date-chip">Aug 2026</span>
+                </div>
+                <div class="cert-org-name">CipherSchools</div>
+                <h3 class="cert-title">Low Level System Design</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1oDa8a5XzqAIqcIcnTaODyD7Jk0unW72u/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 3. CipherSchools — Generative AI Essentials -->
+            <div class="cert-card-premium" data-category="ai">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                  </div>
+                  <span class="cert-date-chip">Aug 2026</span>
+                </div>
+                <div class="cert-org-name">CipherSchools</div>
+                <h3 class="cert-title">Generative AI Essentials</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1Rm7UThEgrRBsW6Z6SksTi-o3GsgWs9aW/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 4. CipherSchools — Git and GitHub -->
+            <div class="cert-card-premium" data-category="tools">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                  </div>
+                  <span class="cert-date-chip">Jul 2026</span>
+                </div>
+                <div class="cert-org-name">CipherSchools</div>
+                <h3 class="cert-title">Git and GitHub</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1MFKkzkWbFpQg8_JoEnfNfVdzLQC7SMpC/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 5. Infosys Springboard — DBMS Part 1 -->
+            <div class="cert-card-premium" data-category="database">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  </div>
+                  <span class="cert-date-chip">Aug 2026</span>
+                </div>
+                <div class="cert-org-name">Infosys Springboard</div>
+                <h3 class="cert-title">DBMS Part 1</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1MurMZp3Tl14jBLVsA46srcOWOoWPvPyb/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 6. Infosys Springboard — Programming Using C++ -->
+            <div class="cert-card-premium" data-category="programming">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  </div>
+                  <span class="cert-date-chip">Aug 2025</span>
+                </div>
+                <div class="cert-org-name">Infosys Springboard</div>
+                <h3 class="cert-title">Programming Using C++</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1iQnK_xBRTxER3v5hcJYIKdNLsL5ztHW9/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 7. LPU & iamneo (NIIT) — Programming in Java -->
+            <div class="cert-card-premium" data-category="programming">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                  </div>
+                  <span class="cert-date-chip">2026</span>
+                </div>
+                <div class="cert-org-name">LPU &amp; iamneo (NIIT)</div>
+                <h3 class="cert-title">Programming in Java</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1ZhmnXt0DZTUcqJEa-25z2TF9bAGOY_bV/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 8. LPU & iamneo — Computer Programming -->
+            <div class="cert-card-premium" data-category="programming">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </div>
+                  <span class="cert-date-chip">2025 &bull; 72 Hours</span>
+                </div>
+                <div class="cert-org-name">LPU &amp; iamneo</div>
+                <h3 class="cert-title">Computer Programming</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1oRQNnonJuNZvwVdE65W5YusBhC4k-IUv/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- 9. WNS Cares/CyberSmart — CSR Awareness Project -->
+            <div class="cert-card-premium" data-category="other">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                  <span class="cert-date-chip">2025</span>
+                </div>
+                <div class="cert-org-name">WNS Cares / CyberSmart</div>
+                <h3 class="cert-title">CSR Awareness Project</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1HFU8jL3zgBwBb7lK1myXnsMFrbd748iF/view" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PROJECTS SECTION (FEATURED EDITORIAL SHOWCASE) -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">04</span> Featured Work</div>
+            <h2 class="section-title">Production Builds &amp; Shipped Products</h2>
+            <p class="section-subtitle">Real-world applications engineered from backend architecture to frontend polish, including AI integration and live deployments.</p>
+          </div>
+
+          <div class="projects-showcase-list">
+
+            <!-- PROJECT 01: HireAI (FEATURED) -->
+            <article class="project-card featured">
+              <div class="project-media-col">
+                <div class="project-device-frame">
+                  <div class="device-top-bar">
+                    <span class="device-circle circle-red"></span>
+                    <span class="device-circle circle-yellow"></span>
+                    <span class="device-circle circle-green"></span>
+                    <span class="device-url-bar">hireai-blond.vercel.app</span>
+                  </div>
+                  <div class="custom-mockup-canvas" style="background: linear-gradient(135deg, #0b1528 0%, #1e1b4b 60%, #030712 100%);">
+                    <div class="mockup-watermark">HIREAI</div>
+                    <div class="mockup-content">
+                      <div class="mockup-icon" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                      </div>
+                      <h4 class="mockup-title">HireAI Platform</h4>
+                      <p class="mockup-desc">AI Resume Matcher &amp; Real-Time Career Intelligence</p>
+                      <div style="display: flex; gap: 8px; justify-content: center; margin-top: 14px;">
+                        <span class="tech-pill" style="background: rgba(59,130,246,0.2); color: #93c5fd;">Gemini AI</span>
+                        <span class="tech-pill" style="background: rgba(99,102,241,0.2); color: #c4b5fd;">Adzuna API</span>
+                        <span class="tech-pill" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">MERN</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-info-col">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-idx">01 / FEATURED BUILD</span>
+                    <span class="project-badge-featured">★ Flagship Product</span>
+                  </div>
+                  <h3 class="project-title">HireAI</h3>
+                  <div class="project-subtitle">AI-Powered Job Board &amp; Career Preparation Platform</div>
+                  <p class="project-desc">
+                    A comprehensive full-stack career platform pulling live listings and using Google Gemini AI to analyze uploaded PDF resumes against job roles — generating a match score, missing skills breakdown, and custom interview prep questions.
+                  </p>
+
+                  <div class="project-highlights-list">
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Real-time job search integrated with the Adzuna API</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Client-side PDF resume parsing via PDF.js fed straight into AI</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>JWT-authenticated dashboard for bookmarked jobs &amp; match history</span>
+                    </div>
+                  </div>
+
+                  <div class="project-tech-pills">
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Vite</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">Express.js</span>
+                    <span class="tech-pill">MongoDB Atlas</span>
+                    <span class="tech-pill">JWT</span>
+                    <span class="tech-pill">Gemini AI</span>
+                    <span class="tech-pill">Adzuna API</span>
+                  </div>
+                </div>
+
+                <div class="project-links-row">
+                  <a href="https://hireai-blond.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                    <span>Live Demo</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/gopalnayak980/hireai" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button class="btn-project-details" data-project="hireai">
+                    <span>Case Study &rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 02: WanderList -->
+            <article class="project-card alternate">
+              <div class="project-media-col">
+                <div class="project-device-frame">
+                  <div class="device-top-bar">
+                    <span class="device-circle circle-red"></span>
+                    <span class="device-circle circle-yellow"></span>
+                    <span class="device-circle circle-green"></span>
+                    <span class="device-url-bar">wanderlist-travel.vercel.app</span>
+                  </div>
+                  <div class="custom-mockup-canvas" style="background: linear-gradient(135deg, #091e1d 0%, #064e3b 50%, #022c22 100%);">
+                    <div class="mockup-watermark">TRAVEL</div>
+                    <div class="mockup-content">
+                      <div class="mockup-icon" style="background: linear-gradient(135deg, #059669, #0d9488);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                      </div>
+                      <h4 class="mockup-title">WanderList Platform</h4>
+                      <p class="mockup-desc">Full-Stack Travel Listing &amp; Property Booking Engine</p>
+                      <div style="display: flex; gap: 8px; justify-content: center; margin-top: 14px;">
+                        <span class="tech-pill" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">Node.js / Express</span>
+                        <span class="tech-pill" style="background: rgba(6,182,212,0.2); color: #67e8f9;">Cloudinary</span>
+                        <span class="tech-pill" style="background: rgba(168,85,247,0.2); color: #d8b4fe;">Groq AI</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-info-col">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-idx">02 / FULL-STACK MVC</span>
+                    <span class="status-pill"><span class="status-dot"></span><span>Deployed</span></span>
+                  </div>
+                  <h3 class="project-title">WanderList</h3>
+                  <div class="project-subtitle">Full-Stack Travel Listing &amp; Vacation Marketplace</div>
+                  <p class="project-desc">
+                    An immersive travel and property rental marketplace. Features full CRUD listing management, multi-image upload pipelines via Cloudinary, Passport.js session security, star reviews, and smart travel recommendations powered by Groq AI.
+                  </p>
+
+                  <div class="project-highlights-list">
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Verified travel listings with image uploads &amp; reviews</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Secure authentication &amp; role-based listing authorization</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Groq AI assistant for automated travel recommendations</span>
+                    </div>
+                  </div>
+
+                  <div class="project-tech-pills">
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">Express.js</span>
+                    <span class="tech-pill">MongoDB</span>
+                    <span class="tech-pill">EJS</span>
+                    <span class="tech-pill">Bootstrap</span>
+                    <span class="tech-pill">Passport.js</span>
+                    <span class="tech-pill">Cloudinary</span>
+                    <span class="tech-pill">Groq AI</span>
+                  </div>
+                </div>
+
+                <div class="project-links-row">
+                  <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                    <span>Live Preview</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button class="btn-project-details" data-project="wanderlist">
+                    <span>Case Study &rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: Jarvis AI -->
+            <article class="project-card">
+              <div class="project-media-col">
+                <div class="project-device-frame">
+                  <div class="device-top-bar">
+                    <span class="device-circle circle-red"></span>
+                    <span class="device-circle circle-yellow"></span>
+                    <span class="device-circle circle-green"></span>
+                    <span class="device-url-bar">jarvis-ai-8zh0.onrender.com</span>
+                  </div>
+                  <div class="custom-mockup-canvas" style="background: linear-gradient(135deg, #110e2e 0%, #311042 50%, #09061c 100%);">
+                    <div class="mockup-watermark">JARVIS</div>
+                    <div class="mockup-content">
+                      <div class="mockup-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                      </div>
+                      <h4 class="mockup-title">Jarvis AI Assistant</h4>
+                      <p class="mockup-desc">Bilingual Voice Agent &amp; Real-Time Vision HUD</p>
+                      <div style="display: flex; gap: 8px; justify-content: center; margin-top: 14px;">
+                        <span class="tech-pill" style="background: rgba(139,92,246,0.2); color: #c4b5fd;">Python / Flask</span>
+                        <span class="tech-pill" style="background: rgba(236,72,153,0.2); color: #f472b6;">Gemini Vision</span>
+                        <span class="tech-pill" style="background: rgba(6,182,212,0.2); color: #67e8f9;">Web Speech</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-info-col">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-idx">03 / AI &amp; VISION</span>
+                    <span class="status-pill"><span class="status-dot"></span><span>Live on Render</span></span>
+                  </div>
+                  <h3 class="project-title">Jarvis AI</h3>
+                  <div class="project-subtitle">Personal AI Voice Assistant with Real-Time Vision</div>
+                  <p class="project-desc">
+                    A bilingual (Hindi + English) AI voice assistant with a custom animated HUD, persistent SQLite memory, and real-time computer vision powered by Google Gemini Vision. Built across ~2,000 lines of Python and JavaScript.
+                  </p>
+
+                  <div class="project-highlights-list">
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Hindi + English natural bilingual voice interaction</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Real-time image scene analysis via Gemini Vision</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Persistent memory &amp; PC command automation</span>
+                    </div>
+                  </div>
+
+                  <div class="project-tech-pills">
+                    <span class="tech-pill">Python 3</span>
+                    <span class="tech-pill">Flask</span>
+                    <span class="tech-pill">SQLite</span>
+                    <span class="tech-pill">Gemini AI</span>
+                    <span class="tech-pill">Web Speech API</span>
+                    <span class="tech-pill">WebRTC</span>
+                  </div>
+                </div>
+
+                <div class="project-links-row">
+                  <a href="https://jarvis-ai-8zh0.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                    <span>Live Demo</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/gopalnayak980/jarvis-ai" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button class="btn-project-details" data-project="jarvis">
+                    <span>Case Study &rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 04: Building Material Supplier (REAL-WORLD BUSINESS) -->
+            <article class="project-card alternate">
+              <div class="project-media-col">
+                <div class="project-device-frame">
+                  <div class="device-top-bar">
+                    <span class="device-circle circle-red"></span>
+                    <span class="device-circle circle-yellow"></span>
+                    <span class="device-circle circle-green"></span>
+                    <span class="device-url-bar">jaimatadibuildingmaterial.com</span>
+                  </div>
+                  <div class="custom-mockup-canvas" style="background: linear-gradient(135deg, #241405 0%, #451a03 50%, #1c0a00 100%);">
+                    <div class="mockup-watermark">SUPPLY</div>
+                    <div class="mockup-content">
+                      <div class="mockup-icon" style="background: linear-gradient(135deg, #d97706, #b45309);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                      </div>
+                      <h4 class="mockup-title">Building Material Supplier</h4>
+                      <p class="mockup-desc">Commercial Web Presence &amp; Material Quotation Suite</p>
+                      <div style="display: flex; gap: 8px; justify-content: center; margin-top: 14px;">
+                        <span class="tech-pill" style="background: rgba(217,119,6,0.2); color: #fcd34d;">Real Business Solution</span>
+                        <span class="tech-pill" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">WhatsApp Flow</span>
+                        <span class="tech-pill" style="background: rgba(59,130,246,0.2); color: #93c5fd;">SEO &amp; Maps</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-info-col">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-idx">04 / REAL-WORLD BUSINESS SOLUTION</span>
+                    <span class="status-pill"><span class="status-dot"></span><span>Live Domain</span></span>
+                  </div>
+                  <h3 class="project-title">Building Material Supplier</h3>
+                  <div class="project-subtitle">Family Enterprise Digitization &amp; Quotation Calculator</div>
+                  <p class="project-desc">
+                    Digitized my family's 25-year-old offline building-materials business (established 2000 in Barhi, Hazaribagh) into an active commercial website with custom material calculators, direct WhatsApp ordering, and local search engine indexing.
+                  </p>
+
+                  <div class="project-highlights-list">
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Product showcase for Bricks, Sand, Stone Chips &amp; Cement</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Multi-step construction quotation &amp; volume calculator</span>
+                    </div>
+                    <div class="highlight-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>1-click WhatsApp inquiry flow &amp; Google Maps integration</span>
+                    </div>
+                  </div>
+
+                  <div class="project-tech-pills">
+                    <span class="tech-pill">HTML5</span>
+                    <span class="tech-pill">CSS3</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">WhatsApp API</span>
+                    <span class="tech-pill">Google Maps</span>
+                    <span class="tech-pill">GitHub Pages</span>
+                  </div>
+                </div>
+
+                <div class="project-links-row">
+                  <a href="https://jaimatadibuildingmaterial.com" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                    <span>Live Website</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/gopalnayak980/jai-mata-di-website" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button class="btn-project-details" data-project="buildingmaterial">
+                    <span>Case Study &rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. DEVELOPER JOURNEY (TIMELINE) -->
+      <section id="journey" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">05</span> Progression</div>
+            <h2 class="section-title">Developer Journey &amp; Milestones</h2>
+            <p class="section-subtitle">A chronological timeline reflecting academic foundations, technical evolution, and the path to shipping production code.</p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Milestone 1 -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period">2024 — Present</span>
+                  <span class="timeline-tag">Academic Foundation</span>
+                </div>
+                <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
+                <div class="timeline-institution">Lovely Professional University (CGPA 7.8)</div>
+                <p class="timeline-desc">
+                  Building deep academic rigor in Operating Systems, Database Management Systems, Computer Networks, and Low-Level System Design principles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period">Algorithmic Problem Solving</span>
+                  <span class="timeline-tag">Core Competency</span>
+                </div>
+                <h3 class="timeline-title">Data Structures &amp; Algorithms</h3>
+                <div class="timeline-institution">Java &amp; C++ Problem Solving on LeetCode</div>
+                <p class="timeline-desc">
+                  Consistent practice solving complex algorithmic challenges covering Dynamic Programming, Trees, Graphs, Sorting, and Hash Tables.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period">MERN Stack Mastery</span>
+                  <span class="timeline-tag">Full-Stack Engineering</span>
+                </div>
+                <h3 class="timeline-title">REST APIs &amp; Scalable Architecture</h3>
+                <div class="timeline-institution">CipherSchools MERN Summer Training (Grade: A+)</div>
+                <p class="timeline-desc">
+                  Designed secure backend REST APIs with Express and MongoDB, implemented stateless JWT auth, and contributed to FleetOps role-based management apps.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period">AI &amp; API Integration</span>
+                  <span class="timeline-tag">Next-Gen Tech</span>
+                </div>
+                <h3 class="timeline-title">LLMs, Computer Vision &amp; Voice Systems</h3>
+                <div class="timeline-institution">Google Gemini, Groq, Web Speech &amp; WebRTC</div>
+                <p class="timeline-desc">
+                  Engineered real-time AI solutions including Gemini PDF resume matching in HireAI and bilingual computer vision voice assistance in Jarvis AI.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period">Real-World Impact</span>
+                  <span class="timeline-tag">Digitization</span>
+                </div>
+                <h3 class="timeline-title">Commercial Enterprise Launch</h3>
+                <div class="timeline-institution">Building Material Supplier Website &amp; Quotation Engine</div>
+                <p class="timeline-desc">
+                  Transitioned a 25-year-old offline brick-and-mortar business into an online brand with WhatsApp commerce and automated quotation calculators.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 6 -->
+            <div class="timeline-item">
+              <div class="timeline-node" style="border-color: var(--accent-emerald); box-shadow: 0 0 20px var(--accent-emerald);"></div>
+              <div class="timeline-content-card" style="border-color: rgba(16, 185, 129, 0.35);">
+                <div class="timeline-meta-bar">
+                  <span class="timeline-period" style="color: var(--accent-emerald);">Active Target</span>
+                  <span class="status-pill"><span class="status-dot"></span><span>Ready to Ship</span></span>
+                </div>
+                <h3 class="timeline-title">Software Development Internship</h3>
+                <div class="timeline-institution">Product Engineering &amp; High-Scale Teams</div>
+                <p class="timeline-desc">
+                  Seeking a high-impact internship opportunity where I can contribute to production codebases, collaborate with senior engineers, and build scalable digital products.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. DEVELOPER ACTIVITY (GITHUB / LEETCODE / LINKEDIN) -->
+      <section id="activity" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">06</span> Developer Hub</div>
+            <h2 class="section-title">Code, Profiles &amp; Continuous Activity</h2>
+            <p class="section-subtitle">Real, verifiable presence across developer platforms and open-source ecosystems.</p>
+          </div>
+
+          <div class="activity-grid">
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="activity-card">
+              <div>
+                <div class="activity-header">
+                  <div class="activity-icon" style="color: #60a5fa;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <div class="activity-platform">GitHub</div>
+                    <div class="activity-handle">@gopalnayak980</div>
+                  </div>
+                </div>
+                <p class="activity-desc">
+                  Open source repositories, MERN microservices, AI pipelines, and production code commits.
+                </p>
+              </div>
+              <div class="activity-action-link">
+                <span>Explore Repositories</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+
+            <!-- LeetCode Card -->
+            <a href="https://leetcode.com/Gopal_Nayak" target="_blank" rel="noopener noreferrer" class="activity-card">
+              <div>
+                <div class="activity-header">
+                  <div class="activity-icon" style="color: #f59e0b;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.535 5.894 5.894 0 0 0 2.434-.245 5.764 5.764 0 0 0 2.015-1.077l3.854-4.126 5.406-5.788a1.374 1.374 0 0 0-.961-2.327h-6.417zm-1.895 2.748h4.63l-4.707 5.04-4.707 5.04c-.394.422-.924.71-1.503.818-.58.107-1.178.016-1.7-.258a2.96 2.96 0 0 1-1.32-1.398 2.87 2.87 0 0 1-.167-1.182c.03-.4.17-.783.407-1.108l3.854-4.126 5.213-5.584zM2.876 16.273a7.48 7.48 0 0 1-.444-1.296A7.08 7.08 0 0 1 2.35 12c0-.682.096-1.36.284-2.014.188-.654.48-1.272.868-1.83l.872.808a5.618 5.618 0 0 0-.703 1.482 5.568 5.568 0 0 0-.226 1.554c0 .546.077 1.09.226 1.614.15.524.385 1.018.696 1.464l-.872.808z"/></svg>
+                  </div>
+                  <div>
+                    <div class="activity-platform">LeetCode</div>
+                    <div class="activity-handle">@Gopal_Nayak</div>
+                  </div>
+                </div>
+                <p class="activity-desc">
+                  DSA problem solving across algorithms, data structures, and competitive programming challenges.
+                </p>
+              </div>
+              <div class="activity-action-link">
+                <span>View Solved Problems</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+
+            <!-- LinkedIn Card -->
+            <a href="https://linkedin.com/in/gopalnayak2005" target="_blank" rel="noopener noreferrer" class="activity-card">
+              <div>
+                <div class="activity-header">
+                  <div class="activity-icon" style="color: #38bdf8;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div>
+                    <div class="activity-platform">LinkedIn</div>
+                    <div class="activity-handle">@gopalnayak2005</div>
+                  </div>
+                </div>
+                <p class="activity-desc">
+                  Professional updates, engineering posts, technical milestones, and industry connections.
+                </p>
+              </div>
+              <div class="activity-action-link">
+                <span>Connect on LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. SUMMER TRAINING SPOTLIGHT -->
+      <section id="training" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">07</span> In-Depth Training</div>
+            <h2 class="section-title">Hands-On Full-Stack Training</h2>
+            <p class="section-subtitle">Intensive coursework and team project engineering in modern web development.</p>
+          </div>
+
+          <div class="training-featured-card">
+            <div class="training-featured-header">
+              <div>
+                <h3 class="training-featured-title">CipherSchools — MERN Stack Summer Training (CSE443)</h3>
+                <div style="font-size: 0.9375rem; color: var(--accent-primary); margin-top: 4px;">Grade Achieved: A+ (Outstanding Performance)</div>
+              </div>
+              <div class="training-featured-date">Jun – Jul 2026</div>
+            </div>
+            <p class="training-featured-desc">
+              Rigorous hands-on training focused on backend REST APIs, MongoDB data modeling, stateless JWT authentication, and full-stack deployment. Built two graded full-stack web apps (To-Do &amp; Library Management system) and contributed core modules to <strong>FleetOps</strong>, a team-engineered role-based fleet management platform.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. CONTACT SECTION (CINEMATIC CTA) -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag"><span class="tag-num">08</span> Get In Touch</div>
+          </div>
+          <div class="contact-cta-wrapper">
+            <h2 class="contact-headline">Let's build something useful.</h2>
+            <p class="contact-subline">
+              I am actively open to Software Development Internships, collaborations, and ambitious technical projects. Whether you have a role or just want to talk code, feel free to reach out.
+            </p>
+
+            <div class="contact-actions-bar">
+              <a href="mailto:gopal32452@gmail.com" class="btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Email Me Directly</span>
+              </a>
+              <button id="btn-copy-email" class="btn-email-copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Email</span>
+              </button>
+            </div>
+
+            <div class="contact-direct-links">
+              <a href="mailto:gopal32452@gmail.com" class="contact-link-item">
+                <span style="color: var(--text-muted);">Email:</span>
+                <span>gopal32452@gmail.com</span>
+              </a>
+              <a href="tel:+917991132452" class="contact-link-item">
+                <span style="color: var(--text-muted);">Phone:</span>
+                <span>+91 7991132452</span>
+              </a>
+              <a href="https://linkedin.com/in/gopalnayak2005" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <span style="color: var(--text-muted);">LinkedIn:</span>
+                <span>gopalnayak2005</span>
+              </a>
+              <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <span style="color: var(--text-muted);">GitHub:</span>
+                <span>gopalnayak980</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 10. FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-copyright">
+            &copy; 2026 Gopal Kumar — Designed with precision &amp; engineered with clean code.
+          </div>
+          <a href="#hero" class="footer-back-to-top">
+            <span>Back to top</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- 11. PROJECT CASE STUDY MODAL -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <div>
+            <h3 id="modal-title" class="modal-title">Project Title</h3>
+            <div id="modal-subtitle" class="modal-subtitle">Project Subtitle</div>
+          </div>
+        </div>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Project Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <div class="modal-section-title">Overview</div>
+          <p id="modal-overview" class="modal-text"></p>
+        </div>
+
+        <div>
+          <div class="modal-section-title">The Challenge &amp; Problem Solved</div>
+          <p id="modal-problem" class="modal-text"></p>
+        </div>
+
+        <div>
+          <div class="modal-section-title">Technical Solution &amp; Strategy</div>
+          <p id="modal-solution" class="modal-text"></p>
+        </div>
+
+        <div>
+          <div class="modal-section-title">System Architecture &amp; Tech Stack</div>
+          <div id="modal-architecture" class="modal-features-grid"></div>
+        </div>
+
+        <div>
+          <div class="modal-section-title">Key Features &amp; Capabilities</div>
+          <div id="modal-features" class="modal-features-grid"></div>
+        </div>
+
+        <div>
+          <div class="modal-section-title">Engineering Learnings &amp; Insights</div>
+          <p id="modal-learnings" class="modal-text"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span id="modal-category" class="status-pill">Full-Stack MERN</span>
+        <div class="modal-footer-links">
+          <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+            <span>Open Live Site</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a id="modal-repo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" aria-live="polite">
+    <div id="toast-notification" class="toast-msg">
+      <svg class="toast-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span id="toast-text">Notification</span>
+    </div>
+  </div>
+
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
