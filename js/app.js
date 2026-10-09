@@ -130,6 +130,38 @@
         'Understood the immense value of applying software engineering to solve tangible, real-world business challenges. Learned local SEO optimization, structured data schemas, and the critical importance of zero-friction mobile UX for commercial conversions.',
       liveUrl: 'https://jaimatadibuildingmaterial.com',
       repoUrl: 'https://github.com/gopalnayak980/jai-mata-di-website'
+    },
+
+    devagent: {
+      title: 'DevAgent',
+      subtitle: 'AI Software Engineering Agent Orchestration Platform',
+      category: 'Full-Stack AI Agent Platform',
+      overview:
+        'DevAgent is an AI-powered software engineering platform that intelligently routes incoming tasks to specialized agents for coding, debugging, and learning. It pairs agent orchestration with persistent memory, tool use, human-in-the-loop approvals, background job processing, authentication, and full observability.',
+      problem:
+        'A single general-purpose AI agent struggles to handle the full span of software engineering work — writing code, debugging failures, and teaching concepts each need different context, tools, and guardrails, and long-running or sensitive actions need a human checkpoint before they execute.',
+      solution:
+        'Built a FastAPI backend that classifies and routes each task to a specialized agent, backed by Groq LLM for fast inference, persistent memory and tool access per agent, a human-approval gate for sensitive actions, and Celery/Redis-driven background workers so long-running jobs do not block the request cycle.',
+      architecture: [
+        'Frontend: React single-page app for task submission, agent routing visibility, and approvals',
+        'Backend: FastAPI REST API with JWT-authenticated endpoints',
+        'Orchestration: Task router dispatching to specialized coding, debugging, and learning agents',
+        'AI Layer: Groq LLM for low-latency agent reasoning and tool-use decisions',
+        'Database: PostgreSQL for persistent task, memory, and approval state',
+        'Background Jobs: Celery workers with Redis as broker for async, long-running agent tasks',
+        'Deployment: Vercel (frontend) with a separately hosted FastAPI backend'
+      ],
+      features: [
+        'Intelligent task routing across specialized coding, debugging & learning agents',
+        'Persistent per-agent memory and tool access across sessions',
+        'Human-in-the-loop approval gates before sensitive or irreversible agent actions',
+        'Async background job processing via Celery & Redis for long-running tasks',
+        'JWT authentication and observability into agent decisions and job status'
+      ],
+      learnings:
+        'Deepened experience in multi-agent orchestration design, structuring human-approval checkpoints into an otherwise autonomous pipeline, and using Celery/Redis to keep a FastAPI request cycle responsive while long-running agent jobs execute in the background.',
+      liveUrl: 'https://dev-agent-woad.vercel.app',
+      repoUrl: 'https://github.com/gopalnayak980/DevAgent'
     }
   };
 
