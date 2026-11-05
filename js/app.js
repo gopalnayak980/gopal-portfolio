@@ -675,15 +675,13 @@
   function initIntro() {
     const intro = document.getElementById('intro');
     if (!intro) return;
-    const seen = (() => { try { return sessionStorage.getItem('introSeen'); } catch (e) { return null; } })();
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const close = (instant) => {
-      try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
       document.body.classList.remove('intro-lock');
       if (instant || typeof gsap === 'undefined') { intro.remove(); return; }
       gsap.to(intro, { yPercent: -100, duration: 0.9, ease: 'power3.inOut', onComplete: () => intro.remove() });
     };
-    if (seen || reduce) { close(true); return; }
+    if (reduce) { close(true); return; }
 
     document.body.classList.add('intro-lock');
     const text = document.getElementById('intro-text');
@@ -719,7 +717,25 @@
               tl.to(title, { top: mobile ? '20%' : '45%', duration: 1.5, ease: 'power3.inOut' }, 0);
               tl.to(portrait, { y: 0, duration: 1.5, ease: 'power3.out' }, 0);
               tl.to([role, ctrl], { opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.2 }, 0.3);
-              tl.call(() => { t2 = setTimeout(() => close(false), 2200); });
+              tl.call(() => {
+                let done = false;
+                const go = () => { if (done) return; done = true; cleanup(); close(false); };
+                const onWheel = (e) => { if (e.deltaY > 20) go(); };
+                let ty = null;
+                const onTS = (e) => { ty = e.touches[0].clientY; };
+                const onTM = (e) => { if (ty !== null && ty - e.touches[0].clientY > 40) go(); };
+                const onKey = (e) => { if (['ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key)) go(); };
+                const cleanup = () => {
+                  window.removeEventListener('wheel', onWheel);
+                  window.removeEventListener('touchstart', onTS);
+                  window.removeEventListener('touchmove', onTM);
+                  window.removeEventListener('keydown', onKey);
+                };
+                window.addEventListener('wheel', onWheel, { passive: true });
+                window.addEventListener('touchstart', onTS, { passive: true });
+                window.addEventListener('touchmove', onTM, { passive: true });
+                window.addEventListener('keydown', onKey);
+              });
             }, 400);
           }
         }, 100);
