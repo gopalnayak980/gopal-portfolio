@@ -2237,3 +2237,24 @@ ul, ol {
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== INTRO OVERLAY ===== */
+.intro{position:fixed;inset:0;z-index:10000;overflow:hidden;color:#fff;font-family:var(--font-body,'Inter',sans-serif)}
+.intro-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,#1c1c1f 0%,#000 70%)}
+.intro-title{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;margin:0;text-align:center;z-index:1;pointer-events:none;user-select:none;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+.intro-title span{display:inline-block;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:-.02em;font-size:clamp(3.4rem,17vw,11rem);background:linear-gradient(to bottom,#fff 0%,#d4d4d8 50%,#52525b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.intro-portrait{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;transform:translateY(100vh);z-index:2;pointer-events:none;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5))}
+.intro-portrait img{display:block;height:auto;width:auto;max-height:88vh;max-width:72vw}
+@media(min-width:768px){.intro-portrait img{max-width:500px}}
+@media(min-width:1280px){.intro-portrait img{max-width:620px}}
+.intro-bottom{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 24px 36px}
+@media(min-width:768px){.intro-bottom{flex-direction:row;justify-content:space-between;align-items:flex-end;padding:0 8% 6%}}
+.intro-role{margin:0;opacity:0;font-size:1.05rem;color:rgba(255,255,255,.9);text-shadow:0 2px 12px rgba(0,0,0,.5);text-align:center}
+.intro-role em{font-weight:300;color:rgba(255,255,255,.7)}
+@media(min-width:768px){.intro-role{font-size:2.2rem;text-align:left}}
+.intro-ctrl{opacity:0}
+.intro-enter,.intro-skip{font:inherit;cursor:pointer;color:#fff;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.4);backdrop-filter:blur(8px);border-radius:999px;transition:background .3s,border-color .3s}
+.intro-enter{padding:12px 28px;font-size:.9rem;font-weight:500}
+.intro-enter:hover,.intro-skip:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5)}
+.intro-skip{position:absolute;top:20px;right:20px;z-index:4;padding:7px 16px;font-size:.78rem;opacity:.7}
+body.intro-lock{overflow:hidden}
