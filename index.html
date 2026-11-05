@@ -31,6 +31,20 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- INTRO OVERLAY (plays once per session) -->
+  <div id="intro" class="intro" aria-label="Intro animation">
+    <div class="intro-bg"></div>
+    <h1 class="intro-title" id="intro-title" aria-label="Gopal Kumar — Portfolio"><span id="intro-text" aria-hidden="true">GOPAL KUMAR</span></h1>
+    <div class="intro-portrait" id="intro-portrait"><img src="./assets/hero-portrait.png" alt="Gopal Kumar" /></div>
+    <div class="intro-bottom">
+      <p class="intro-role" id="intro-role"><strong>Full-Stack</strong> <em>AI Developer</em></p>
+      <div class="intro-ctrl" id="intro-ctrl">
+        <button type="button" class="intro-enter" id="intro-enter">Enter Portfolio &rarr;</button>
+      </div>
+    </div>
+    <button type="button" class="intro-skip" id="intro-skip">Skip</button>
+  </div>
+
 
   <!-- Ambient Glow Elements -->
   <div class="bg-canvas-container">
@@ -555,23 +569,24 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </a>
             </div>
-            <!-- NPTEL (IIT Hyderabad) — Privacy and Security in Online Social Media -->
-<div class="cert-card-premium" data-category="other">
-  <div>
-    <div class="cert-card-header">
-      <div class="cert-icon-wrapper">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-      </div>
-      <span class="cert-date-chip">Jul–Oct 2026</span>
-    </div>
-    <div class="cert-org-name">NPTEL · IIT Hyderabad</div>
-    <h3 class="cert-title">Privacy and Security in Online Social Media</h3>
-  </div>
-  <a href="https://drive.google.com/file/d/1HCgFfaEg61o0dLW_PbuCS2Mc7YDZav1m/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
-    <span>View Certificate</span>
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-  </a>
-</div>
+
+            <!-- 10. NPTEL (IIT Hyderabad) — Privacy and Security in Online Social Media -->
+            <div class="cert-card-premium" data-category="other">
+              <div>
+                <div class="cert-card-header">
+                  <div class="cert-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  </div>
+                  <span class="cert-date-chip">Jul–Oct 2026</span>
+                </div>
+                <div class="cert-org-name">NPTEL · IIT Hyderabad</div>
+                <h3 class="cert-title">Privacy and Security in Online Social Media</h3>
+              </div>
+              <a href="https://drive.google.com/file/d/1HCgFfaEg61o0dLW_PbuCS2Mc7YDZav1m/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-view-cert">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
 
           </div>
         </div>
@@ -954,30 +969,31 @@
                   <h3 class="project-title">DevAgent</h3>
                   <div class="project-subtitle">AI Software Engineering Agent Orchestration Platform</div>
                   <p class="project-desc">
-                    An AI-powered platform that intelligently routes engineering tasks to specialized agents for coding, debugging, and learning — backed by persistent memory, tool use, human-in-the-loop approvals, background job processing, authentication, and full observability.
+                    A multi-agent AI platform with Supervisor, Coding, Debugging, and Study agents that classify and route software engineering tasks — with persistent conversation memory, LLM tool calling, background jobs, and human-approved code changes.
                   </p>
 
                   <div class="project-highlights-list">
                     <div class="highlight-item">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span>Intelligent task routing across specialized coding, debugging &amp; learning agents</span>
+                      <span>Supervisor agent routes each task to the Coding, Debugging or Study agent</span>
                     </div>
                     <div class="highlight-item">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span>Human-in-the-loop approval gates for sensitive agent actions</span>
+                      <span>Human-approved code edits using unified diffs, SHA-256 validation &amp; atomic file writes</span>
                     </div>
                     <div class="highlight-item">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span>Async background job processing via Celery &amp; Redis with full observability</span>
+                      <span>JWT auth, role-based access, rate limiting &amp; 307 passing backend tests</span>
                     </div>
                   </div>
 
                   <div class="project-tech-pills">
-                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">React.js</span>
                     <span class="tech-pill">FastAPI</span>
                     <span class="tech-pill">Python</span>
                     <span class="tech-pill">Groq LLM</span>
                     <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">SQLAlchemy</span>
                     <span class="tech-pill">Redis</span>
                     <span class="tech-pill">Celery</span>
                     <span class="tech-pill">JWT</span>
