@@ -137,29 +137,29 @@
       subtitle: 'AI Software Engineering Agent Orchestration Platform',
       category: 'Full-Stack AI Agent Platform',
       overview:
-        'DevAgent is an AI-powered software engineering platform that intelligently routes incoming tasks to specialized agents for coding, debugging, and learning. It pairs agent orchestration with persistent memory, tool use, human-in-the-loop approvals, background job processing, authentication, and full observability.',
+        'DevAgent is a multi-agent AI platform with Supervisor, Coding, Debugging, and Study agents that intelligently classify and route software engineering tasks. It combines persistent conversation memory, LLM tool calling, asynchronous background jobs, execution monitoring, and a secure workspace where code changes are applied only after human approval.',
       problem:
-        'A single general-purpose AI agent struggles to handle the full span of software engineering work — writing code, debugging failures, and teaching concepts each need different context, tools, and guardrails, and long-running or sensitive actions need a human checkpoint before they execute.',
+        'A single general-purpose AI assistant has to handle very different jobs — writing code, debugging failures, and explaining concepts — and letting an AI edit files directly is risky without a human checkpoint and safeguards against corrupted or conflicting changes.',
       solution:
-        'Built a FastAPI backend that classifies and routes each task to a specialized agent, backed by Groq LLM for fast inference, persistent memory and tool access per agent, a human-approval gate for sensitive actions, and Celery/Redis-driven background workers so long-running jobs do not block the request cycle.',
+        'A Supervisor agent classifies every incoming task and routes it to the right specialist agent. Code modifications are proposed as unified diffs, validated with SHA-256 checks, applied only after human approval, and written atomically. Long-running work runs in Celery background jobs backed by Redis, while JWT authentication, role-based access control, user data isolation, and rate limiting secure the API.',
       architecture: [
-        'Frontend: React single-page app for task submission, agent routing visibility, and approvals',
-        'Backend: FastAPI REST API with JWT-authenticated endpoints',
-        'Orchestration: Task router dispatching to specialized coding, debugging, and learning agents',
-        'AI Layer: Groq LLM for low-latency agent reasoning and tool-use decisions',
-        'Database: PostgreSQL for persistent task, memory, and approval state',
-        'Background Jobs: Celery workers with Redis as broker for async, long-running agent tasks',
-        'Deployment: Vercel (frontend) with a separately hosted FastAPI backend'
+        'Frontend: React.js single-page app, deployed on Vercel',
+        'Backend: Python & FastAPI REST API, deployed on Render',
+        'Agents: Supervisor, Coding, Debugging and Study agents powered by Groq LLM with tool calling',
+        'Database: PostgreSQL (Neon) accessed through SQLAlchemy for persistent conversations and memory',
+        'Background Jobs: Celery workers with Redis (Upstash) for asynchronous tasks and execution monitoring',
+        'Security: JWT authentication, role-based access control, per-user data isolation, rate limiting and API security'
       ],
       features: [
-        'Intelligent task routing across specialized coding, debugging & learning agents',
-        'Persistent per-agent memory and tool access across sessions',
-        'Human-in-the-loop approval gates before sensitive or irreversible agent actions',
-        'Async background job processing via Celery & Redis for long-running tasks',
-        'JWT authentication and observability into agent decisions and job status'
+        'Supervisor agent that classifies and routes tasks to Coding, Debugging and Study agents',
+        'Persistent conversation memory and LLM tool calling',
+        'Secure workspace management with file inspection',
+        'Human-approved code modifications using unified diffs, SHA-256 validation and atomic file writes',
+        'Asynchronous background jobs with Celery & Redis, plus execution monitoring',
+        '307 passing backend tests in the last full verification'
       ],
       learnings:
-        'Deepened experience in multi-agent orchestration design, structuring human-approval checkpoints into an otherwise autonomous pipeline, and using Celery/Redis to keep a FastAPI request cycle responsive while long-running agent jobs execute in the background.',
+        'Designed a multi-agent system where one agent routes work to specialists, built a safe human-in-the-loop flow for AI-generated code changes, and learned to secure and test a production backend — with authentication, access control, rate limiting, and 307 passing backend tests.',
       liveUrl: 'https://dev-agent-woad.vercel.app',
       repoUrl: 'https://github.com/gopalnayak980/DevAgent'
     }
@@ -670,7 +670,68 @@
   // --------------------------------------------------------------------------
   // 11. APP INITIALIZATION
   // --------------------------------------------------------------------------
+
+  /* ===== INTRO OVERLAY ===== */
+  function initIntro() {
+    const intro = document.getElementById('intro');
+    if (!intro) return;
+    const seen = (() => { try { return sessionStorage.getItem('introSeen'); } catch (e) { return null; } })();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const close = (instant) => {
+      try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
+      document.body.classList.remove('intro-lock');
+      if (instant || typeof gsap === 'undefined') { intro.remove(); return; }
+      gsap.to(intro, { yPercent: -100, duration: 0.9, ease: 'power3.inOut', onComplete: () => intro.remove() });
+    };
+    if (seen || reduce) { close(true); return; }
+
+    document.body.classList.add('intro-lock');
+    const text = document.getElementById('intro-text');
+    const title = document.getElementById('intro-title');
+    const portrait = document.getElementById('intro-portrait');
+    const role = document.getElementById('intro-role');
+    const ctrl = document.getElementById('intro-ctrl');
+    document.getElementById('intro-skip').addEventListener('click', () => { killAll(); close(false); });
+    document.getElementById('intro-enter').addEventListener('click', () => { killAll(); close(false); });
+
+    const finalWord = 'PORTFOLIO';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let scr, lock, t1, t2, tl, locked = 0;
+    const killAll = () => { clearInterval(scr); clearInterval(lock); clearTimeout(t1); clearTimeout(t2); if (tl) tl.kill(); };
+    if (typeof gsap === 'undefined') { close(true); return; }
+    gsap.set(portrait, { y: '100vh' });
+
+    const start = () => {
+      t1 = setTimeout(() => {
+        scr = setInterval(() => {
+          let out = '';
+          for (let i = 0; i < finalWord.length; i++) out += i < locked ? finalWord[i] : chars[Math.floor(Math.random() * chars.length)];
+          text.textContent = out;
+        }, 50);
+        lock = setInterval(() => {
+          locked++;
+          if (locked >= finalWord.length) {
+            clearInterval(lock); clearInterval(scr);
+            text.textContent = finalWord;
+            t2 = setTimeout(() => {
+              const mobile = window.innerWidth < 768;
+              tl = gsap.timeline();
+              tl.to(title, { top: mobile ? '20%' : '45%', duration: 1.5, ease: 'power3.inOut' }, 0);
+              tl.to(portrait, { y: 0, duration: 1.5, ease: 'power3.out' }, 0);
+              tl.to([role, ctrl], { opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.2 }, 0.3);
+              tl.call(() => { t2 = setTimeout(() => close(false), 2200); });
+            }, 400);
+          }
+        }, 100);
+      }, 1000);
+    };
+    const img = new Image();
+    img.onload = start; img.onerror = start;
+    img.src = './assets/hero-portrait.png';
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    initIntro();
     initHeroCanvas();
     initCursorSpotlight();
     initNavbar();
