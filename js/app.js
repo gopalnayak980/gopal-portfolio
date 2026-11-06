@@ -573,18 +573,16 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Section headers reveal
+    // Section headers: tag, title and subtitle fall in one after another (power3.out like the React site)
     gsap.utils.toArray('.section-header').forEach((header) => {
-      gsap.from(header, {
-        scrollTrigger: {
-          trigger: header,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        },
+      const parts = Array.from(header.children);
+      gsap.from(parts.length ? parts : header, {
+        scrollTrigger: { trigger: header, start: 'top 85%', once: true },
         opacity: 0,
-        y: 35,
-        duration: 0.8,
-        ease: 'power3.out'
+        y: 70,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.12
       });
     });
 
@@ -620,19 +618,14 @@
       });
     }
 
-    // Project cards staggered entrance & image parallax
+    // Project cards: media rises first, then every text block staggers in
     gsap.utils.toArray('.project-card').forEach((card) => {
-      gsap.from(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 82%',
-          toggleActions: 'play none none none'
-        },
-        opacity: 0,
-        y: 45,
-        duration: 0.9,
-        ease: 'power3.out'
-      });
+      const media = card.querySelector('.project-media-col');
+      const info = card.querySelector('.project-info-col');
+      const items = info ? Array.from(info.querySelectorAll('.project-meta-top, .project-title, .project-subtitle, .project-desc, .project-highlights-list, .project-tech-pills, .project-links-row')) : [];
+      const tl = gsap.timeline({ scrollTrigger: { trigger: card, start: 'top 80%', once: true } });
+      if (media) tl.from(media, { opacity: 0, y: 60, duration: 1, ease: 'power3.out' });
+      if (items.length) tl.from(items, { opacity: 0, y: 60, duration: 1, ease: 'power3.out', stagger: 0.12 }, media ? '-=0.7' : 0);
     });
 
     // Timeline items reveal
@@ -664,6 +657,76 @@
         duration: 0.7,
         ease: 'power2.out'
       });
+    });
+
+    // About: paragraph reads itself word by word as you scroll
+    const bios = Array.from(document.querySelectorAll('.about-bio'));
+    const words = [];
+    const split = (node) => {
+      Array.from(node.childNodes).forEach((n) => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach((t) => {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(' ')); return; }
+            const sp = document.createElement('span');
+            sp.className = 'w'; sp.textContent = t; frag.appendChild(sp); words.push(sp);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) split(n);
+      });
+    };
+    bios.forEach(split);
+    if (words.length) {
+      gsap.fromTo(words, { opacity: 0.18 }, {
+        opacity: 1, stagger: 0.1, ease: 'none',
+        scrollTrigger: { trigger: '.about-details', start: 'top 85%', end: 'bottom 55%', scrub: true }
+      });
+    }
+    const stats = gsap.utils.toArray('.about-stats-grid > *');
+    if (stats.length) {
+      gsap.from(stats, { opacity: 0, y: 40, duration: 0.8, ease: 'power3.out', stagger: 0.12,
+        scrollTrigger: { trigger: '.about-stats-grid', start: 'top 88%', once: true } });
+    }
+
+    // Contact: heading, buttons and links come in as one timeline
+    const contact = document.querySelector('.contact-cta-wrapper');
+    if (contact) {
+      const tl = gsap.timeline({ scrollTrigger: { trigger: '#contact', start: 'top 70%', once: true } });
+      tl.from('.contact-headline', { opacity: 0, y: 50, duration: 1, ease: 'power3.out' })
+        .from('.contact-subline', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.7')
+        .from('.contact-actions-bar > *', { opacity: 0, scale: 0.85, duration: 0.6, ease: 'power3.out', stagger: 0.1 }, '-=0.5')
+        .from('.contact-direct-links > *', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', stagger: 0.12 }, '-=0.4');
+    }
+
+    // Layout shifts after fonts/images load: recalc trigger positions
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+    setTimeout(() => ScrollTrigger.refresh(), 600);
+  }
+
+  // Skills ticker: two rows scrolling in opposite directions, built from the badges
+  function initSkillsMarquee() {
+    const box = document.getElementById('skills-marquee');
+    if (!box) return;
+    const names = [];
+    document.querySelectorAll('#skills .skill-badge span').forEach((s) => {
+      const t = s.textContent.trim();
+      if (t && !names.includes(t)) names.push(t);
+    });
+    if (names.length < 4) return;
+    const rows = [[], []];
+    names.forEach((n, i) => rows[i % 2].push(n));
+    rows.forEach((list, i) => {
+      const row = document.createElement('div');
+      row.className = 'mq-row ' + (i === 0 ? 'left' : 'right');
+      const track = document.createElement('div');
+      track.className = 'mq-track';
+      const once = list.concat(list); // each half is wider than the screen
+      once.concat(once).forEach((n) => {
+        const it = document.createElement('span');
+        it.className = 'mq-item'; it.textContent = n; track.appendChild(it);
+      });
+      row.appendChild(track); box.appendChild(row);
     });
   }
 
@@ -737,6 +800,7 @@
     initProjectModals();
     initMagneticButtons();
     initEmailCopy();
+    initSkillsMarquee();
     initGSAPAnimations();
   });
 })();
