@@ -31,19 +31,6 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- INTRO OVERLAY (plays once per session) -->
-  <div id="intro" class="intro" aria-label="Intro animation">
-    <div class="intro-bg"></div>
-    <h1 class="intro-title" id="intro-title" aria-label="Gopal Kumar — Portfolio"><span id="intro-text" aria-hidden="true">GOPAL KUMAR</span></h1>
-    <div class="intro-portrait" id="intro-portrait"><img src="./assets/hero-portrait.png" alt="Gopal Kumar" /></div>
-    <div class="intro-bottom">
-      <p class="intro-role" id="intro-role"><strong>Full-Stack</strong> <em>AI Developer</em></p>
-      <div class="intro-ctrl" id="intro-ctrl">
-        <button type="button" class="intro-enter" id="intro-enter">Enter Portfolio &rarr;</button>
-      </div>
-    </div>
-    <button type="button" class="intro-skip" id="intro-skip">Skip</button>
-  </div>
 
 
   <!-- Ambient Glow Elements -->
@@ -109,69 +96,16 @@
     <main>
 
       <!-- 2. HERO SECTION ("THE WOW MOMENT") -->
-      <section id="hero" class="hero-section">
-        <div class="container">
-          <div class="hero-content">
-            
-            <div class="hero-avatar-badge">
-              <img src="assets/profile.jpg" alt="Gopal Kumar" class="hero-avatar-thumb" />
-              <span class="hero-avatar-text">Gopal Kumar &bull; Open to Internships</span>
-            </div>
-
-            <h1 class="hero-title">Gopal Kumar</h1>
-            
-            <div class="hero-subtitle">
-              <span>Full-Stack Developer</span>
-              <span style="color: var(--text-muted);">/</span>
-              <span style="color: var(--accent-cyan);">MERN + AI Integrations</span>
-            </div>
-
-            <p class="hero-lede">
-              Building full-stack products, AI-powered applications, and real-world digital solutions. Focused on clean architecture, scalable backends, and intuitive user experiences.
-            </p>
-
-            <div class="hero-chips">
-              <span class="tech-chip">MERN STACK</span>
-              <span class="tech-chip">AI INTEGRATION</span>
-              <span class="tech-chip">REST APIs</span>
-              <span class="tech-chip">DATABASES</span>
-              <span class="tech-chip">DEPLOYMENT</span>
-            </div>
-
-            <div class="hero-cta-group">
-              <a href="#projects" class="btn-primary">
-                <span>View Projects</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </a>
-              <a href="./assets/Gopal-Kumar-CV.pdf" download="Gopal-Kumar-CV.pdf" class="btn-secondary">
-                <span>Download CV</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              </a>
-              <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                <span>View GitHub Profile</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
-
-            <div class="hero-social-links">
-              <a href="https://github.com/gopalnayak980" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub</span>
-              </a>
-              <a href="https://linkedin.com/in/gopalnayak2005" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://leetcode.com/Gopal_Nayak" target="_blank" rel="noopener noreferrer" class="social-pill" title="LeetCode">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.535 5.894 5.894 0 0 0 2.434-.245 5.764 5.764 0 0 0 2.015-1.077l3.854-4.126 5.406-5.788a1.374 1.374 0 0 0-.961-2.327h-6.417zm-1.895 2.748h4.63l-4.707 5.04-4.707 5.04c-.394.422-.924.71-1.503.818-.58.107-1.178.016-1.7-.258a2.96 2.96 0 0 1-1.32-1.398 2.87 2.87 0 0 1-.167-1.182c.03-.4.17-.783.407-1.108l3.854-4.126 5.213-5.584zM2.876 16.273a7.48 7.48 0 0 1-.444-1.296A7.08 7.08 0 0 1 2.35 12c0-.682.096-1.36.284-2.014.188-.654.48-1.272.868-1.83l.872.808a5.618 5.618 0 0 0-.703 1.482 5.568 5.568 0 0 0-.226 1.554c0 .546.077 1.09.226 1.614.15.524.385 1.018.696 1.464l-.872.808z"/></svg>
-                <span>LeetCode</span>
-              </a>
-              <a href="mailto:gopal32452@gmail.com" class="social-pill" title="Email Gopal">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Email</span>
-              </a>
-            </div>
-
+      <section id="hero" class="intro" aria-label="Gopal Kumar — Portfolio">
+        <div class="intro-bg"></div>
+        <h1 class="intro-title" id="intro-title" aria-label="Gopal Kumar — Portfolio"><span id="intro-text" aria-hidden="true">GOPAL KUMAR</span></h1>
+        <div class="intro-portrait" id="intro-portrait"><img src="./assets/hero-portrait.png" alt="Gopal Kumar" /></div>
+        <div class="intro-bottom">
+          <p class="intro-role" id="intro-role"><strong>Full-Stack</strong> <em>AI Developer</em></p>
+          <div class="intro-ctrl" id="intro-ctrl">
+            <a href="#projects" class="intro-btn">View Projects</a>
+            <a href="./assets/Gopal-Kumar-CV.pdf" download="Gopal-Kumar-CV.pdf" class="intro-btn">Download CV</a>
+            <a href="#contact" class="intro-btn intro-btn-arrow" aria-label="Go to contact section">Contact &#8599;</a>
           </div>
         </div>
       </section>
