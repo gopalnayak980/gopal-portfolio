@@ -671,34 +671,33 @@
   // 11. APP INITIALIZATION
   // --------------------------------------------------------------------------
 
-  /* ===== INTRO OVERLAY ===== */
+  /* ===== HERO INTRO (front page) ===== */
   function initIntro() {
-    const intro = document.getElementById('intro');
-    if (!intro) return;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const close = (instant) => {
-      document.body.classList.remove('intro-lock');
-      if (instant || typeof gsap === 'undefined') { intro.remove(); return; }
-      gsap.to(intro, { yPercent: -100, duration: 0.9, ease: 'power3.inOut', onComplete: () => intro.remove() });
-    };
-    if (reduce) { close(true); return; }
-
-    document.body.classList.add('intro-lock');
+    const hero = document.getElementById('hero');
     const text = document.getElementById('intro-text');
     const title = document.getElementById('intro-title');
     const portrait = document.getElementById('intro-portrait');
     const role = document.getElementById('intro-role');
     const ctrl = document.getElementById('intro-ctrl');
-    document.getElementById('intro-skip').addEventListener('click', () => { killAll(); close(false); });
-    document.getElementById('intro-enter').addEventListener('click', () => { killAll(); close(false); });
+    if (!hero || !text) return;
 
     const finalWord = 'PORTFOLIO';
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let scr, lock, t1, t2, tl, locked = 0;
-    const killAll = () => { clearInterval(scr); clearInterval(lock); clearTimeout(t1); clearTimeout(t2); if (tl) tl.kill(); };
-    if (typeof gsap === 'undefined') { close(true); return; }
+    const mobile = () => window.innerWidth < 768;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const showFinal = () => {
+      text.textContent = finalWord;
+      title.style.top = mobile() ? '20%' : '45%';
+      portrait.style.transform = 'none';
+      role.style.opacity = 1; ctrl.style.opacity = 1;
+    };
+    if (reduce || typeof gsap === 'undefined') { showFinal(); return; }
+
+    document.body.classList.add('intro-lock');
+    const unlock = () => document.body.classList.remove('intro-lock');
     gsap.set(portrait, { y: '100vh' });
 
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let locked = 0, scr, lock, t1, t2, tl;
     const start = () => {
       t1 = setTimeout(() => {
         scr = setInterval(() => {
@@ -712,35 +711,17 @@
             clearInterval(lock); clearInterval(scr);
             text.textContent = finalWord;
             t2 = setTimeout(() => {
-              const mobile = window.innerWidth < 768;
-              tl = gsap.timeline();
-              tl.to(title, { top: mobile ? '20%' : '45%', duration: 1.5, ease: 'power3.inOut' }, 0);
+              tl = gsap.timeline({ onComplete: unlock });
+              tl.to(title, { top: mobile() ? '20%' : '45%', duration: 1.5, ease: 'power3.inOut' }, 0);
               tl.to(portrait, { y: 0, duration: 1.5, ease: 'power3.out' }, 0);
               tl.to([role, ctrl], { opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.2 }, 0.3);
-              tl.call(() => {
-                let done = false;
-                const go = () => { if (done) return; done = true; cleanup(); close(false); };
-                const onWheel = (e) => { if (e.deltaY > 20) go(); };
-                let ty = null;
-                const onTS = (e) => { ty = e.touches[0].clientY; };
-                const onTM = (e) => { if (ty !== null && ty - e.touches[0].clientY > 40) go(); };
-                const onKey = (e) => { if (['ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key)) go(); };
-                const cleanup = () => {
-                  window.removeEventListener('wheel', onWheel);
-                  window.removeEventListener('touchstart', onTS);
-                  window.removeEventListener('touchmove', onTM);
-                  window.removeEventListener('keydown', onKey);
-                };
-                window.addEventListener('wheel', onWheel, { passive: true });
-                window.addEventListener('touchstart', onTS, { passive: true });
-                window.addEventListener('touchmove', onTM, { passive: true });
-                window.addEventListener('keydown', onKey);
-              });
             }, 400);
           }
         }, 100);
       }, 1000);
     };
+    // safety: never leave the page locked
+    setTimeout(unlock, 9000);
     const img = new Image();
     img.onload = start; img.onerror = start;
     img.src = './assets/hero-portrait.png';
